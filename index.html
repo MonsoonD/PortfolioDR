@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Damien Renard — Portfolio BTS SIO SISR</title>
+<meta name="description" content="Portfolio de Damien Renard, étudiant en BTS SIO option SISR au CNED — systèmes, réseaux et infrastructures.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-top">
+    <div class="avatar">DR</div>
+    <h1 class="id-name">Damien<br>Renard</h1>
+    <p class="id-role">BTS SIO · Option SISR<br>CNED</p>
+    <div class="status-pill">
+      <span class="dot"></span> Disponible pour une alternance
+    </div>
+  </div>
+
+  <nav class="side-nav" aria-label="Navigation principale">
+    <a href="#accueil" class="nav-link active" data-target="accueil">
+      <svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-6h4v6"/></svg>
+      Accueil
+    </a>
+    <a href="#profil" class="nav-link" data-target="profil">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1.2-4 4-6 7-6s5.8 2 7 6"/></svg>
+      Profil
+    </a>
+    <a href="#parcours" class="nav-link" data-target="parcours">
+      <svg viewBox="0 0 24 24"><path d="M4 4v16"/><circle cx="4" cy="6" r="1.6"/><circle cx="4" cy="12" r="1.6"/><circle cx="4" cy="18" r="1.6"/><path d="M9 6h11M9 12h11M9 18h7"/></svg>
+      Parcours
+    </a>
+    <a href="#competences" class="nav-link" data-target="competences">
+      <svg viewBox="0 0 24 24"><rect x="3" y="4" width="7" height="7" rx="1"/><rect x="14" y="4" width="7" height="7" rx="1"/><rect x="3" y="15" width="7" height="5" rx="1"/><rect x="14" y="15" width="7" height="5" rx="1"/></svg>
+      Compétences
+    </a>
+    <a href="#projets" class="nav-link" data-target="projets">
+      <svg viewBox="0 0 24 24"><path d="M3 7h6l2 2h10v10H3z"/></svg>
+      Projets
+    </a>
+    <a href="#contact" class="nav-link" data-target="contact">
+      <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m4 6.5 8 6 8-6"/></svg>
+      Contact
+    </a>
+  </nav>
+
+  <div class="sidebar-bottom">
+    <a href="mailto:renarddamien0112@gmail.com" class="mini-link">renarddamien0112@gmail.com</a>
+    <a href="tel:0768042024" class="mini-link">07 68 04 20 24</a>
+    <span class="mini-muted">Ablis · 78660</span>
+  </div>
+</aside>
+
+<main class="content">
+
+  <section id="accueil" class="section hero">
+    <p class="path-label">~/accueil</p>
+    <p class="hero-kicker">Étudiant en systèmes, réseaux &amp; infrastructures</p>
+    <h2 class="hero-title">Construire des infrastructures<br>fiables, pas seulement<br>du code.</h2>
+    <p class="hero-lede">Après une première année tournée vers le développement, je me suis réorienté vers l'administration systèmes et réseaux — c'est là que je veux construire ma carrière. Actuellement en BTS SIO option SISR au CNED.</p>
+    <div class="hero-actions">
+      <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+      <a href="cv-damien-renard.pdf" class="btn btn-ghost" download>Télécharger mon CV</a>
+    </div>
+
+    <div class="uptime-panel">
+      <div class="uptime-row">
+        <span class="uptime-key">statut</span>
+        <span class="uptime-val"><span class="dot dot-inline"></span>recherche active — alternance / stage</span>
+      </div>
+      <div class="uptime-row">
+        <span class="uptime-key">formation</span>
+        <span class="uptime-val">BTS SIO SISR — CNED</span>
+      </div>
+      <div class="uptime-row">
+        <span class="uptime-key">localisation</span>
+        <span class="uptime-val">Ablis (78) — mobile Île-de-France</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="profil" class="section">
+    <p class="path-label">~/profil</p>
+    <h3 class="section-title">Parcours en réorientation</h3>
+    <div class="profil-grid">
+      <p class="profil-text">
+        J'ai obtenu un Bac Général avec spécialités NSI et AMC au lycée Louis Bascan de Rambouillet, avant de suivre un Bachelor Développement Web-Sécurisé à la Coding Factory de Paris. Cette première expérience m'a donné de solides bases en développement — front-end, back-end, gestion de bases de données — et une vraie culture du travail en équipe sur des projets techniques.
+      </p>
+      <p class="profil-text">
+        En avançant dans ma formation, j'ai compris que ce qui m'intéresse le plus n'est pas d'écrire des applications, mais de faire tourner et sécuriser ce qui les fait fonctionner : serveurs, réseaux, postes de travail, infrastructures. C'est pour ça que je poursuis aujourd'hui en BTS SIO option SISR (Solutions d'Infrastructure, Systèmes et Réseaux) au CNED, en vue d'une alternance dans l'administration systèmes et réseaux.
+      </p>
+      <ul class="trait-list">
+        <li>Sérieux</li>
+        <li>Envie d'apprendre</li>
+        <li>Motivation</li>
+        <li>Travail d'équipe</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="parcours" class="section">
+    <p class="path-label">~/parcours</p>
+    <h3 class="section-title">Formation</h3>
+    <ol class="timeline">
+      <li class="timeline-item current">
+        <span class="timeline-date">En cours</span>
+        <h4>BTS SIO — Option SISR</h4>
+        <p>CNED (Centre National d'Enseignement à Distance)</p>
+        <p class="timeline-note">Solutions d'Infrastructure, Systèmes et Réseaux — administration systèmes, réseaux, virtualisation, cybersécurité, support utilisateurs.</p>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-date">2024 – 2025</span>
+        <h4>Bachelor Développement Web-Sécurisé</h4>
+        <p>Coding Factory — 75015 Paris</p>
+        <p class="timeline-note">Analyse des besoins utilisateurs, travail en équipe, conception et développement de solutions web sécurisées.</p>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-date">2021 – 2024</span>
+        <h4>Bac Général — Spécialités NSI / AMC</h4>
+        <p>Lycée Louis Bascan — 78120 Rambouillet</p>
+      </li>
+    </ol>
+  </section>
+
+  <section id="competences" class="section">
+    <p class="path-label">~/competences</p>
+    <h3 class="section-title">Compétences</h3>
+
+    <div class="comp-block">
+      <h4 class="comp-block-title">Programme BTS SIO SISR — en cours d'acquisition</h4>
+      <div class="skill-tags">
+        <span>Administration Windows / Linux</span>
+        <span>Réseaux — TCP/IP, VLAN, routage</span>
+        <span>Virtualisation</span>
+        <span>Cybersécurité</span>
+        <span>Support &amp; assistance utilisateurs</span>
+      </div>
+    </div>
+
+    <div class="comp-block">
+      <h4 class="comp-block-title">Acquises — développement</h4>
+      <div class="skill-tags">
+        <span>HTML / CSS</span>
+        <span>Python</span>
+        <span>SQL</span>
+        <span>PHP</span>
+        <span>Algorithmique / POO</span>
+        <span>Méthode Agile (Scrum)</span>
+        <span>Git / GitHub</span>
+        <span>Unity</span>
+      </div>
+    </div>
+
+    <div class="comp-block">
+      <h4 class="comp-block-title">Langue</h4>
+      <div class="skill-tags">
+        <span>Anglais — B2/C1</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projets" class="section">
+    <p class="path-label">~/projets</p>
+    <h3 class="section-title">Projets réalisés</h3>
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="project-meta">
+          <span>2025 · 2 semaines</span>
+          <span>4 personnes</span>
+        </div>
+        <h4>BubbleBook</h4>
+        <p>Site permettant de trouver des toiletteurs pour animaux, responsive et adapté mobile.</p>
+        <div class="project-stack">
+          <span>HTML</span><span>CSS</span><span>SQL</span><span>JavaScript</span><span>PHP</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-meta">
+          <span>2025 · 1 semaine</span>
+          <span>4 personnes</span>
+        </div>
+        <h4>Pharmacie</h4>
+        <p>Application de gestion de stock de produits pharmaceutiques : ajout, retrait et réponse aux demandes des utilisateurs.</p>
+        <div class="project-stack">
+          <span>Java</span><span>POO</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-meta">
+          <span>2024 · 1 semaine</span>
+          <span>2 personnes</span>
+        </div>
+        <h4>Image Editor</h4>
+        <p>Outil de retouche d'images en console : noir &amp; blanc, flou, dilatation, rotation, écriture sur l'image.</p>
+        <div class="project-stack">
+          <span>Python</span><span>POO</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-meta">
+          <span>2024 · 4 semaines</span>
+          <span>4 personnes</span>
+        </div>
+        <h4>Memory</h4>
+        <p>Jeu de Memory en ligne, responsive et adapté mobile, avec création de compte et scores enregistrés dans un leaderboard.</p>
+        <div class="project-stack">
+          <span>HTML</span><span>CSS</span><span>SQL</span><span>JavaScript</span><span>PHP</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <p class="path-label">~/contact</p>
+    <h3 class="section-title">Contact</h3>
+    <p class="contact-lede">À la recherche d'une alternance en administration systèmes &amp; réseaux — n'hésitez pas à me contacter.</p>
+    <div class="contact-grid">
+      <a href="mailto:renarddamien0112@gmail.com" class="contact-card">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">renarddamien0112@gmail.com</span>
+      </a>
+      <a href="tel:0768042024" class="contact-card">
+        <span class="contact-label">Téléphone</span>
+        <span class="contact-value">07 68 04 20 24</span>
+      </a>
+      <div class="contact-card contact-card-static">
+        <span class="contact-label">Localisation</span>
+        <span class="contact-value">Ablis — 78660</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>Damien Renard — BTS SIO SISR</span>
+    <span>Mis à jour en 2026</span>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
