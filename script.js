@@ -7,7 +7,7 @@
    Pas besoin de chercher un titre ou un lien ailleurs dans le
    code : tout le site utilise cette seule variable.
 */
-const CV_PATH = "cv-damien-renard.pdf";
+const CV_PATH = "cv-damien-renard-sept2026.pdf";
 
 document.addEventListener('DOMContentLoaded', () => {
   const cvLink = document.getElementById('cvLink');
