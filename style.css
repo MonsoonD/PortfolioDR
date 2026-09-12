@@ -21,8 +21,8 @@
   --sidebar-text-muted: #A9BBEA;
 
   --accent: #2F5CE0;
-  --accent-2: #1FB6A0;
-  --accent-warm: #FF8A3D;
+  --accent-2: #3c60cd;
+  --accent-warm: #0040ff;
 
   --font-display: 'Space Grotesk', sans-serif;
   --font-body: 'IBM Plex Sans', sans-serif;
@@ -681,20 +681,41 @@ a.contact-card:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 4px;
     position: fixed;
     top: 16px; right: 16px;
-    width: 40px; height: 40px;
+    width: 44px; height: 44px;
     background: var(--panel);
     border: 1px solid var(--line);
     border-radius: 8px;
-    z-index: 20;
+    z-index: 30;
+    box-shadow: 0 2px 8px rgba(20,30,60,0.08);
   }
   .nav-toggle span{
     display:block;
-    width: 16px; height: 1.5px;
+    width: 18px; height: 1.6px;
     background: var(--text);
-    margin: 0 auto;
+    border-radius: 2px;
+    transition: transform .25s ease, opacity .2s ease, background-color .2s ease;
+  }
+  /* transforme le hamburger en croix quand le menu est ouvert */
+  .nav-toggle.open span:nth-child(1){ transform: translateY(5.5px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2){ opacity: 0; }
+  .nav-toggle.open span:nth-child(3){ transform: translateY(-5.5px) rotate(-45deg); }
+
+  .nav-backdrop{
+    position: fixed;
+    inset: 0;
+    background: rgba(11,17,34,0.45);
+    z-index: 15;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease;
+  }
+  .nav-backdrop.open{
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .sidebar{
@@ -702,8 +723,11 @@ a.contact-card:hover{
     transition: transform .25s ease;
     width: 82vw;
     max-width: 300px;
+    z-index: 20;
   }
   .sidebar.open{ transform: translateX(0); }
+
+  body.nav-open{ overflow: hidden; }
 
   .content{ margin-left: 0; padding: 0 20px; }
   .section{ padding: 88px 0 32px; }
