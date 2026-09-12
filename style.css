@@ -21,8 +21,8 @@
   --sidebar-text-muted: #A9BBEA;
 
   --accent: #2F5CE0;
-  --accent-2: #3c60cd;
-  --accent-warm: #0040ff;
+  --accent-2: #1FB6A0;
+  --accent-warm: #FF8A3D;
 
   --font-display: 'Space Grotesk', sans-serif;
   --font-body: 'IBM Plex Sans', sans-serif;
@@ -551,6 +551,7 @@ ul,ol{ margin:0; padding:0; list-style:none; }
 }
 
 .project-card{
+  cursor: pointer;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 12px;
@@ -566,7 +567,23 @@ ul,ol{ margin:0; padding:0; list-style:none; }
   box-shadow: 0 14px 26px -14px rgba(20,30,60,0.28);
 }
 
+.project-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.project-link-icon{
+  width: 18px; height: 18px;
+  fill: var(--text-faint);
+  flex-shrink: 0;
+  transition: fill .15s ease;
+}
+.project-card:hover .project-link-icon{ fill: var(--accent); }
+
 .project-card-empty{
+  cursor: default;
   justify-content: center;
   border-style: dashed;
   background: transparent;
