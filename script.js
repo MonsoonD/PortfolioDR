@@ -7,7 +7,7 @@
    Pas besoin de chercher un titre ou un lien ailleurs dans le
    code : tout le site utilise cette seule variable.
 */
-const CV_PATH = "cv-damien-renard-sept2026.pdf";
+const CV_PATH = "cv-damien-renard.pdf";
 
 document.addEventListener('DOMContentLoaded', () => {
   const cvLink = document.getElementById('cvLink');
@@ -19,18 +19,25 @@ document.addEventListener('DOMContentLoaded', () => {
 // ---------------- Menu mobile ----------------
 const toggle = document.getElementById('navToggle');
 const sidebar = document.getElementById('sidebar');
+const backdrop = document.getElementById('navBackdrop');
 
-if (toggle && sidebar) {
+function setMenu(open) {
+  sidebar.classList.toggle('open', open);
+  toggle.classList.toggle('open', open);
+  backdrop.classList.toggle('open', open);
+  document.body.classList.toggle('nav-open', open);
+  toggle.setAttribute('aria-expanded', String(open));
+}
+
+if (toggle && sidebar && backdrop) {
   toggle.addEventListener('click', () => {
-    const isOpen = sidebar.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(isOpen));
+    setMenu(!sidebar.classList.contains('open'));
   });
 
+  backdrop.addEventListener('click', () => setMenu(false));
+
   document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      sidebar.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    });
+    link.addEventListener('click', () => setMenu(false));
   });
 }
 
