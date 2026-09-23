@@ -9,10 +9,17 @@
 */
 const CV_PATH = "cv-damien-renard.pdf";
 
+/* Remplace par l'URL complète de ton profil LinkedIn. */
+const LINKEDIN_URL = "https://www.linkedin.com/in/damien-renard";
+
 document.addEventListener('DOMContentLoaded', () => {
   const cvLink = document.getElementById('cvLink');
   if (cvLink) {
     cvLink.href = CV_PATH;
+  }
+  const linkedinLink = document.getElementById('linkedinLink');
+  if (linkedinLink) {
+    linkedinLink.href = LINKEDIN_URL;
   }
 });
 
@@ -115,3 +122,18 @@ document.querySelectorAll('[data-spotlight]').forEach(card => {
     card.style.setProperty('--my', ((e.clientY - rect.top) / rect.height) * 100 + '%');
   });
 });
+
+// ---------------- Formulaire de contact (mailto, sans backend) ----------------
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('cf-name').value.trim();
+    const email = document.getElementById('cf-email').value.trim();
+    const message = document.getElementById('cf-message').value.trim();
+
+    const subject = encodeURIComponent(`Contact portfolio — ${name}`);
+    const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
+    window.location.href = `mailto:renarddamien0112@gmail.com?subject=${subject}&body=${body}`;
+  });
+}
